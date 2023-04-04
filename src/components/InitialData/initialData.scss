@@ -1,0 +1,70 @@
+.initialDataWrapper{
+  width: 100%;
+  height: 100vh;
+  background: rgba(17, 28, 44, 0.86);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s;
+}
+
+.initialDataForm{
+  width: 320px;
+  background: wheat;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: changeOpacity 0.5s ease-out 0s alternate none running;
+}
+
+@keyframes changeOpacity {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.initialDataCalcBtn{
+  width: 100px;
+  height: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.initialDataSettings{
+  padding-top: 20px;
+  min-width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  button{
+    border-radius: 5px;
+    background: #f3be8b;
+    color: #17176b;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+input{
+  height: 32px;
+  font-size: 15px;
+  margin: 3px 10px 15px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}

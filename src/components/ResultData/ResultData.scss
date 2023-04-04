@@ -1,0 +1,39 @@
+.result-wrapper{
+  background: wheat;
+  border-radius: 5px;
+  box-shadow: 4px 5px 17px 5px rgba(34, 60, 80, 0.2);
+  overflow: auto;
+  margin: 20px;
+  transition: background-color 1s;
+}
+table{
+  border-collapse: collapse;
+  margin: 3px 3px 20px;
+}
+td, th{
+  border: 1px solid grey;
+}
+tr:nth-child(2n+3){
+  background: rgba(185, 185, 185, 0.42);
+}
+.tr-head{
+  position: sticky;
+  top: -2px;
+  background: #979ca9;
+  height: 30px;
+}
+
+.result-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.result-wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f3be8b;
+  border-radius: 10px;
+}
+
+.result-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #808080, #17176b);
+}
