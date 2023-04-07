@@ -22,7 +22,7 @@ const InitialData = () => {
 
     if (!prefVisible){
         return <div className='initialDataSettings'>
-            <button onClick={()=>setPrefVisible(true)}>Настроить</button>
+            <button onClick={()=>setPrefVisible(true)}>Ввести данные</button>
             {resultStore.resultData.length>0 && <ExportXls />}
         </div>
     }
@@ -31,16 +31,16 @@ const InitialData = () => {
         <div className='initialDataWrapper' onClick={()=>setPrefVisible(false)}>
             <div className="initialDataForm" onClick={(e)=>e.stopPropagation()}>
                 <div style={{paddingTop:'10px'}}>Cтартовый депозит</div>
-                <input type='number' placeholder='Введите стартовый депозит' value={deposit}
+                <input type='number' placeholder='Введите стартовый депозит' value={deposit===0?'':deposit}
                        onChange={e => setDeposit(Number(e.target.value))}/>
                 <div>Дневной доход в %</div>
-                <input type="number" placeholder='Введите желаемый % дневного дохода' value={percent}
+                <input type="number" placeholder='Введите желаемый % дневного дохода' value={percent===0?'':percent}
                        onChange={e => setPercent(Number(e.target.value))}/>
                 <div>Количество рабочих дней</div>
-                <input type="number" placeholder='Введите количество рабочих дней' value={days}
+                <input type="number" placeholder='Введите количество рабочих дней' value={days===0?'':days}
                        onChange={e => setDays(Number(e.target.value))}/>
                 <div>Дневной пэйаут пропа в %</div>
-                <input type="number" placeholder='Введите % дневного пэйаута' value={payout}
+                <input type="number" placeholder='Введите % дневного пэйаута' value={payout===0?'':payout}
                        onChange={e => setPayout(Number(e.target.value))}/>
                 <button className='initialDataCalcBtn' onClick={calculateDeposit}>Рассчитать</button>
             </div>
